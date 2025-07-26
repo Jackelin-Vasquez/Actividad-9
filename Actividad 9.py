@@ -29,10 +29,22 @@ def opcion_cuatro():
         else:
             print("Pelicula no encontrada para eliminar...")
 
+def opcion_cinco():
+    total_peliculas= len(peliculas)
+    generos=[]
+    mayor = peliculas[2]
+    menor= peliculas[2]
+    for años in peliculas[2]:
+        if años > mayor:
+            mayor= años
+        if años < menor:
+            menor = años
+    return mayor, menor, total_peliculas
+
 while True:
     print("---MENÚ---")
-    print("1.Agregar Peliculas.\n 2. MOstras las peliculas registradas\n 3.Buscar pelicula por genero")
-    print("4.Eliminar pelicula por titulo\n 4.Ver estadisiticas de catolagos.\n 5.Salir del programa")
+    print("1.Agregar Peliculas.\n2. MOstras las peliculas registradas\n3.Buscar pelicula por genero")
+    print("4.Eliminar pelicula por titulo.\n4.Ver estadisiticas de catolagos.\n5.Salir del programa")
 
     opcion= input("Ingrese una opcion:")
 
@@ -47,4 +59,14 @@ while True:
             opcion_tres()
         case "4":
             print("---ELIMINAR PELICULAS---")
-
+        case "5":
+            print("---ESTADÍSTICAS DEL CATÁLOGO---")
+            resultado = opcion_cinco()
+            print(f"Hay {resultado[2]} peliculas resgistradas.")
+            print("h")
+            print(f"La pelicula mas antigua es:{resultado[1]}")
+        case "6":
+            print("Saliendo del programa. Gracias por usarlo!")
+            break
+        case _:
+            print("Opcion no valida...")
