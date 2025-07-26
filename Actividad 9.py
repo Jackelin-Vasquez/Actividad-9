@@ -20,6 +20,14 @@ def opcion_tres():
     for genero in peliculas:
         if genero[2] == buscar_pelicula:
             print(f"Nombre de pelicula:{genero[0]}")
+def opcion_cuatro():
+    while True:
+        titulo_pelicula= input("Ingrese nombre de pelicula a eliminar:")
+        if titulo_pelicula in peliculas:
+            peliculas.remove(titulo_pelicula)
+            break
+        else:
+            print("Pelicula no encontrada para eliminar...")
 
 while True:
     print("---MENÚ---")
@@ -37,4 +45,6 @@ while True:
         case "3":
             print("---PELICULAS POR SU GENERO---")
             opcion_tres()
+        case "4":
+            print("---ELIMINAR PELICULAS---")
 
