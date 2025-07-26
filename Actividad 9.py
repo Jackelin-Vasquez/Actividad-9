@@ -38,6 +38,8 @@ def opcion_cinco():
 
     return total_peliculas,mas_antigua
 
+    #NOTA: Faltaria el conteo de cuantas peliculas hay por genero
+
 while True:
     print("---MENÚ---")
     print("1.Agregar Peliculas.\n2. MOstras las peliculas registradas\n3.Buscar pelicula por genero")
