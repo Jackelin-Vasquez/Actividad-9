@@ -2,6 +2,7 @@ peliculas=[]
 def opcion_uno():
     cantidad_peliculas= int(input("Ingrese cantidad de peliculas a ingresar:"))
     for i in range(cantidad_peliculas):
+        print(f"----PELICULA NO.{i+1}----")
         titulo= input(f"Ingrese nombre de pelicula {i+1}:")
         año_estreno= int(input(f"Ingrese año de estreño de pelicula {i+1}:"))
         genero=input(f"Ingrese genero de pelicula {i+1}:")
@@ -9,16 +10,16 @@ def opcion_uno():
 
 def opcion_dos():
     for i in peliculas:
+        print("---"*7)
         print(f"Titulo de pelicula:{i[0]}\nAño:{i[1]}\nGénero:{i[2]}")
+        print("---"*7)
 
 def opcion_tres():
     buscar_pelicula= input("Ingrese género a buscar:")
     print(f"Peliculas de {buscar_pelicula}")
     for genero in peliculas:
-        if peliculas[2] == buscar_pelicula:
-            print(genero[0])
-        else:
-            print("Peliculas no encontradas...")
+        if genero[2] == buscar_pelicula:
+            print(f"Nombre de pelicula:{genero[0]}")
 
 while True:
     print("---MENÚ---")
