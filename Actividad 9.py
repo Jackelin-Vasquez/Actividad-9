@@ -29,15 +29,14 @@ def opcion_cuatro():
 
 def opcion_cinco():
     total_peliculas= len(peliculas)
-    generos=[]
-    mayor = peliculas[2]
-    menor= peliculas[2]
-    for años in peliculas[2]:
-        if años > mayor:
-            mayor= años
-        if años < menor:
-            menor = años
-    return mayor, menor, total_peliculas
+    if total_peliculas ==0:
+        return "No hay peliculas..."
+    mas_antigua=peliculas[0]
+    for peli_antigua in peliculas:
+        if peli_antigua[1] < mas_antigua[1]:
+            mas_antigua=peli_antigua
+
+    return total_peliculas,mas_antigua
 
 while True:
     print("---MENÚ---")
@@ -61,7 +60,7 @@ while True:
         case "5":
             print("---ESTADÍSTICAS DEL CATÁLOGO---")
             resultado = opcion_cinco()
-            print(f"Hay {resultado[2]} peliculas resgistradas.")
+            print(f"Hay {resultado[0]} peliculas resgistradas.")
             print("h")
             print(f"La pelicula mas antigua es:{resultado[1]}")
         case "6":
