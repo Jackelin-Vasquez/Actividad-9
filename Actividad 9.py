@@ -3,9 +3,9 @@ def opcion_uno():
     cantidad_peliculas= int(input("Ingrese cantidad de peliculas a ingresar:"))
     for i in range(cantidad_peliculas):
         print(f"----PELICULA NO.{i+1}----")
-        titulo= input(f"Ingrese nombre de pelicula {i+1}:")
+        titulo= input(f"Ingrese nombre de pelicula {i+1}:").lower()
         año_estreno= int(input(f"Ingrese año de estreño de pelicula {i+1}:"))
-        genero=input(f"Ingrese genero de pelicula {i+1}:")
+        genero=input(f"Ingrese genero de pelicula {i+1}:").lower()
         peliculas.append([titulo,año_estreno,genero])
 
 def opcion_dos():
@@ -15,19 +15,17 @@ def opcion_dos():
         print("---"*7)
 
 def opcion_tres():
-    buscar_pelicula= input("Ingrese género a buscar:")
+    buscar_pelicula= input("Ingrese género a buscar:").lower()
     print(f"Peliculas de {buscar_pelicula}")
     for genero in peliculas:
         if genero[2] == buscar_pelicula:
             print(f"Nombre de pelicula:{genero[0]}")
+
 def opcion_cuatro():
-    while True:
         titulo_pelicula= input("Ingrese nombre de pelicula a eliminar:")
-        if titulo_pelicula in peliculas:
-            peliculas.remove(titulo_pelicula)
-            break
-        else:
-            print("Pelicula no encontrada para eliminar...")
+        for pelis in peliculas:
+            if pelis[0] == titulo_pelicula:
+                peliculas.remove(pelis)
 
 def opcion_cinco():
     total_peliculas= len(peliculas)
