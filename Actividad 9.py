@@ -7,6 +7,7 @@ def opcion_uno():
         año_estreno= int(input(f"Ingrese año de estreño de pelicula {i+1}:"))
         genero=input(f"Ingrese genero de pelicula {i+1}:").lower()
         peliculas.append([titulo,año_estreno,genero])
+        print("Pelicula agregada exitosamente!")
 
 def opcion_dos():
     for i in peliculas:
@@ -29,6 +30,9 @@ def opcion_cuatro():
         for pelis in peliculas:
             if pelis[0] == titulo_pelicula:
                 peliculas.remove(pelis)
+        else:
+            if not pelis[0] == titulo_pelicula:
+                print("Pelicula no encontrada...")
 
 def opcion_cinco():
     total_peliculas= len(peliculas)
