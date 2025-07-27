@@ -38,10 +38,11 @@ def opcion_cinco():
     total_peliculas= len(peliculas)
     if total_peliculas ==0:
         return "No hay peliculas..."
-    mas_antigua=peliculas[0]
-    for peli_antigua in peliculas:
-        if peli_antigua[1] < mas_antigua[1]:
-            mas_antigua=peli_antigua
+    else:
+        mas_antigua=peliculas[0]
+        for peli_antigua in peliculas:
+            if peli_antigua[1] < mas_antigua[1]:
+                mas_antigua=peli_antigua
 
     return total_peliculas,mas_antigua
 
@@ -70,7 +71,7 @@ while True:
             print("---ESTADÍSTICAS DEL CATÁLOGO---")
             resultado = opcion_cinco()
             print(f"Hay {resultado[0]} peliculas resgistradas.")
-            print("h")
+            print("Hay (número peliculas) de (genero)")
             print(f"La pelicula mas antigua es:{resultado[1]}")
         case "6":
             print("Saliendo del programa. Gracias por usarlo!")
