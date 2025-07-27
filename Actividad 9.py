@@ -43,6 +43,11 @@ def opcion_cinco():
         for peli_antigua in peliculas:
             if peli_antigua[1] < mas_antigua[1]:
                 mas_antigua=peli_antigua
+    #generos_1= 0
+        #for generos in peliculas:
+            #if generos[2] == "comedia":
+                #generos_1 +=1
+
 
     return total_peliculas,mas_antigua
 
