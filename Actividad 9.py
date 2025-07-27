@@ -55,8 +55,8 @@ def opcion_cinco():
 
 while True:
     print("---MENÚ---")
-    print("1.Agregar Peliculas.\n2. MOstras las peliculas registradas\n3.Buscar pelicula por genero")
-    print("4.Eliminar pelicula por titulo.\n5.Ver estadisiticas de catolagos.\n6.Salir del programa")
+    print("1.Agregar Peliculas.\n2. MOstras las peliculas registradas.\n3.Buscar pelicula por genero.")
+    print("4.Eliminar pelicula por titulo.\n5.Ver estadisiticas de catolagos.\n6.Salir del programa.")
 
     opcion= input("Ingrese una opcion:")
 
